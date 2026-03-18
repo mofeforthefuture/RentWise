@@ -1,4 +1,5 @@
 import { MessageCircle } from "lucide-react";
+import { getWhatsAppUrl } from "../lib/whatsapp";
 
 interface WhatsAppButtonProps {
   text: string;
@@ -7,9 +8,7 @@ interface WhatsAppButtonProps {
 }
 
 export function WhatsAppButton({ text, size = "md", className = "" }: WhatsAppButtonProps) {
-  const whatsappNumber = "2348000000000"; // Replace with actual WhatsApp number
-  const message = encodeURIComponent("Hi Rentwise, I would like to book an apartment inspection.");
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+  const whatsappUrl = getWhatsAppUrl();
 
   const sizeClasses = {
     sm: "px-4 py-2 text-sm",

@@ -1,10 +1,9 @@
 import { MessageCircle } from "lucide-react";
 import { motion } from "motion/react";
+import { getWhatsAppUrl } from "../lib/whatsapp";
 
 export function FloatingWhatsAppButton() {
-  const whatsappNumber = "2348000000000"; // Replace with actual WhatsApp number
-  const message = encodeURIComponent("Hi Rentwise, I would like to book an apartment inspection.");
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+  const whatsappUrl = getWhatsAppUrl();
 
   return (
     <motion.a

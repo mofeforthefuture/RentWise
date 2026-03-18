@@ -22,6 +22,8 @@ import { FloatingWhatsAppButton } from "./components/FloatingWhatsAppButton";
 import { TestimonialCard } from "./components/TestimonialCard";
 import { InspectionReportPreview } from "./components/InspectionReportPreview";
 import logoColor from "../assets/logo-color.png";
+import heroPhoto from "../assets/e37118e8-e920-41df-9192-d6c3b1da6ad6.JPG";
+import { getWhatsAppUrl } from "./lib/whatsapp";
 
 const TAGLINE = "Inspect before you rent.";
 const fadeUp = {
@@ -160,7 +162,7 @@ export default function App() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <img
-            src="https://images.unsplash.com/photo-1753622801504-ffb20809e45a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+            src={heroPhoto}
             alt="Inspector assessing an apartment"
             className="w-full aspect-[4/3] md:aspect-video object-cover"
           />
@@ -478,7 +480,7 @@ export default function App() {
             Let Rentwise inspect it before you pay.
           </p>
           <motion.a
-            href="https://wa.me/2348000000000?text=Hi%20Rentwise%2C%20I%20would%20like%20to%20book%20an%20apartment%20inspection."
+            href={getWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-white text-[var(--rentwise-primary)] px-8 py-4 rounded-full font-bold shadow-xl text-lg"
@@ -504,7 +506,7 @@ export default function App() {
             Apartment inspection service for Lagos renters.
           </p>
           <a
-            href="https://wa.me/2348000000000?text=Hi%20Rentwise%2C%20I%20would%20like%20to%20book%20an%20apartment%20inspection."
+            href={getWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-[var(--rentwise-green)] hover:text-[var(--rentwise-green-dark)] font-medium"
