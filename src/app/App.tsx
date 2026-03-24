@@ -191,7 +191,6 @@ export default function App() {
               "Hidden plumbing issues",
               "Flood-prone areas",
               "Bad wiring & power supply",
-              "Fake or unverified landlords",
               "Water and drainage problems",
               "Structural damage",
             ].map((text, i) => (
