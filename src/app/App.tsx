@@ -354,30 +354,40 @@ export default function App() {
             Transparent pricing
           </h2>
           <p className="text-gray-600 text-center max-w-xl mx-auto mb-10">
-            One fee. Up to 4 apartments. No hidden charges.
+            Location-based fee. Up to 4 apartments. No hidden charges.
           </p>
 
           <motion.div
-            className="max-w-sm mx-auto bg-white rounded-2xl border-2 border-[var(--rentwise-green)] p-8 shadow-lg"
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <p className="text-center text-gray-500 text-sm font-medium uppercase tracking-wide mb-1">
-              Inspection fee
-            </p>
-            <p className="text-center text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              ₦35,000
-            </p>
-            <ul className="space-y-3 mb-8">
-              {["Up to 4 apartments", "Detailed report with photos", "Clear recommendations"].map((item, i) => (
-                <li key={i} className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[var(--rentwise-green)] shrink-0" />
-                  <span className="text-gray-700">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <WhatsAppButton text="Book on WhatsApp" size="lg" className="w-full" />
+            {[
+              { location: "Mainland", price: "₦35,000" },
+              { location: "Island", price: "₦45,000" },
+            ].map(({ location, price }) => (
+              <div
+                key={location}
+                className="bg-white rounded-2xl border-2 border-[var(--rentwise-green)] p-8 shadow-lg"
+              >
+                <p className="text-center text-gray-500 text-sm font-medium uppercase tracking-wide mb-1">
+                  {location} inspection fee
+                </p>
+                <p className="text-center text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  {price}
+                </p>
+                <ul className="space-y-3 mb-8">
+                  {["Up to 4 apartments", "Detailed report with photos", "Clear recommendations"].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[var(--rentwise-green)] shrink-0" />
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <WhatsAppButton text="Book on WhatsApp" size="lg" className="w-full" />
+              </div>
+            ))}
           </motion.div>
         </div>
       </AnimatedSection>
