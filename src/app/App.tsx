@@ -2,7 +2,6 @@ import { useRef, type ReactNode } from "react";
 import {
   CheckCircle2,
   X,
-  MessageCircle,
   Home,
   Users,
   FileText,
@@ -17,14 +16,11 @@ import {
   Eye,
 } from "lucide-react";
 import { motion, useInView } from "motion/react";
-import { WhatsAppButton } from "./components/WhatsAppButton";
-import { FloatingWhatsAppButton } from "./components/FloatingWhatsAppButton";
 import { TestimonialCard } from "./components/TestimonialCard";
 import { InspectionReportPreview } from "./components/InspectionReportPreview";
 import { Button } from "./components/ui/button";
 import logoColor from "../assets/logo-color.png";
 import heroPhoto from "../assets/e37118e8-e920-41df-9192-d6c3b1da6ad6.JPG";
-import { getWhatsAppUrl } from "./lib/whatsapp";
 
 const TAGLINE = "Inspect before you rent.";
 const WAITLIST_URL =
@@ -83,8 +79,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
-      <FloatingWhatsAppButton />
-
       {/* ——— 1. HERO ——— */}
       <section ref={heroRef} className="px-4 pt-8 pb-14 md:pt-12 md:pb-20 max-w-6xl mx-auto">
         <div className="text-center mb-10">
@@ -130,7 +124,6 @@ export default function App() {
             animate={heroInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.18 }}
           >
-            <WhatsAppButton text="Inspect an Apartment Now" size="lg" />
             <Button size="lg" variant="outline" asChild>
               <a href={WAITLIST_URL} target="_blank" rel="noreferrer">
                 Join Waitlist
@@ -217,7 +210,11 @@ export default function App() {
             Rentwise inspects the property for you <strong>before you pay rent, caution fees, or agent fees.</strong>
           </p>
           <div className="flex justify-center">
-            <WhatsAppButton text="Book an Inspection" size="lg" />
+            <Button size="lg" variant="outline" asChild>
+              <a href={WAITLIST_URL} target="_blank" rel="noreferrer">
+                Join Waitlist
+              </a>
+            </Button>
           </div>
         </div>
       </AnimatedSection>
@@ -258,7 +255,11 @@ export default function App() {
           </motion.div>
 
           <div className="flex justify-center">
-            <WhatsAppButton text="Send Apartment Details" size="lg" />
+            <Button size="lg" variant="outline" asChild>
+              <a href={WAITLIST_URL} target="_blank" rel="noreferrer">
+                Join Waitlist
+              </a>
+            </Button>
           </div>
         </div>
       </AnimatedSection>
@@ -293,7 +294,11 @@ export default function App() {
           </motion.div>
 
           <div className="flex justify-center mt-10">
-            <WhatsAppButton text="Chat With Us on WhatsApp" size="md" />
+            <Button variant="outline" asChild>
+              <a href={WAITLIST_URL} target="_blank" rel="noreferrer">
+                Join Waitlist
+              </a>
+            </Button>
           </div>
         </div>
       </AnimatedSection>
@@ -332,7 +337,11 @@ export default function App() {
           </motion.div>
 
           <div className="flex justify-center">
-            <WhatsAppButton text="Book an Inspection" size="lg" />
+            <Button size="lg" variant="outline" asChild>
+              <a href={WAITLIST_URL} target="_blank" rel="noreferrer">
+                Join Waitlist
+              </a>
+            </Button>
           </div>
         </div>
       </AnimatedSection>
@@ -350,7 +359,11 @@ export default function App() {
           <InspectionReportPreview />
 
           <div className="flex justify-center mt-10">
-            <WhatsAppButton text="Get My Report" size="lg" />
+            <Button size="lg" variant="outline" asChild>
+              <a href={WAITLIST_URL} target="_blank" rel="noreferrer">
+                Join Waitlist
+              </a>
+            </Button>
           </div>
         </div>
       </AnimatedSection>
@@ -393,7 +406,11 @@ export default function App() {
                     </li>
                   ))}
                 </ul>
-                <WhatsAppButton text="Book on WhatsApp" size="lg" className="w-full" />
+                <Button size="lg" variant="outline" className="w-full" asChild>
+                  <a href={WAITLIST_URL} target="_blank" rel="noreferrer">
+                    Join Waitlist
+                  </a>
+                </Button>
               </div>
             ))}
           </motion.div>
@@ -441,7 +458,11 @@ export default function App() {
           </motion.div>
 
           <div className="flex justify-center mt-10">
-            <WhatsAppButton text="Inspect an Apartment Now" size="md" />
+            <Button variant="outline" asChild>
+              <a href={WAITLIST_URL} target="_blank" rel="noreferrer">
+                Join Waitlist
+              </a>
+            </Button>
           </div>
         </div>
       </AnimatedSection>
@@ -497,15 +518,14 @@ export default function App() {
             Let Rentwise inspect it before you pay.
           </p>
           <motion.a
-            href={getWhatsAppUrl()}
+            href={WAITLIST_URL}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-white text-[var(--rentwise-primary)] px-8 py-4 rounded-full font-bold shadow-xl text-lg"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
           >
-            <MessageCircle className="w-6 h-6" />
-            Book on WhatsApp
+            Join Waitlist
           </motion.a>
         </div>
       </motion.section>
@@ -522,15 +542,11 @@ export default function App() {
           <p className="text-gray-400 text-sm mb-6">
             Apartment inspection service for Lagos renters.
           </p>
-          <a
-            href={getWhatsAppUrl()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[var(--rentwise-green)] hover:text-[var(--rentwise-green-dark)] font-medium"
-          >
-            <MessageCircle className="w-5 h-5" />
-            Contact us on WhatsApp
-          </a>
+          <Button variant="outline" asChild>
+            <a href={WAITLIST_URL} target="_blank" rel="noreferrer">
+              Join Waitlist
+            </a>
+          </Button>
           <div className="border-t border-gray-700 mt-8 pt-8">
             <p className="text-gray-500 text-sm">© 2026 Rentwise. All rights reserved.</p>
           </div>
