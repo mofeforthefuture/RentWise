@@ -21,11 +21,14 @@ import { WhatsAppButton } from "./components/WhatsAppButton";
 import { FloatingWhatsAppButton } from "./components/FloatingWhatsAppButton";
 import { TestimonialCard } from "./components/TestimonialCard";
 import { InspectionReportPreview } from "./components/InspectionReportPreview";
+import { Button } from "./components/ui/button";
 import logoColor from "../assets/logo-color.png";
 import heroPhoto from "../assets/e37118e8-e920-41df-9192-d6c3b1da6ad6.JPG";
 import { getWhatsAppUrl } from "./lib/whatsapp";
 
 const TAGLINE = "Inspect before you rent.";
+const WAITLIST_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLScgFDwANDx5Wf0eJqt6SkAETqt3HMTtg2ZK_UaX5wvlqhQwMg/viewform";
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
   animate: {
@@ -122,12 +125,17 @@ export default function App() {
           </motion.p>
 
           <motion.div
-            className="mb-8"
+            className="mb-8 flex flex-col sm:flex-row items-center justify-center gap-3"
             initial={{ opacity: 0, y: 12 }}
             animate={heroInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.18 }}
           >
             <WhatsAppButton text="Inspect an Apartment Now" size="lg" />
+            <Button size="lg" variant="outline" asChild>
+              <a href={WAITLIST_URL} target="_blank" rel="noreferrer">
+                Join Waitlist
+              </a>
+            </Button>
           </motion.div>
 
           <motion.div
