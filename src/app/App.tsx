@@ -80,7 +80,10 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* ——— 1. HERO ——— */}
-      <section ref={heroRef} className="px-4 pt-8 pb-14 md:pt-12 md:pb-20 max-w-6xl mx-auto">
+      <section
+        ref={heroRef}
+        className="px-4 pt-8 pb-14 md:pt-12 md:pb-20 max-w-6xl mx-auto"
+      >
         <div className="text-center mb-10">
           <motion.div
             className="inline-flex flex-col items-center gap-2 mb-6"
@@ -102,20 +105,31 @@ export default function App() {
             className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5 leading-tight tracking-tight"
             initial={{ opacity: 0, y: 16 }}
             animate={heroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              duration: 0.5,
+              delay: 0.06,
+              ease: [0.22, 1, 0.36, 1],
+            }}
           >
             Inspect Any Apartment
             <br />
-            <span className="text-[var(--rentwise-primary)]">Before You Pay.</span>
+            <span className="text-[var(--rentwise-primary)]">
+              Before You Pay.
+            </span>
           </motion.h1>
 
           <motion.p
             className="text-base md:text-lg text-gray-600 mb-8 max-w-xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 12 }}
             animate={heroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              duration: 0.5,
+              delay: 0.12,
+              ease: [0.22, 1, 0.36, 1],
+            }}
           >
-            Rentwise sends a trained inspector to assess up to 4 apartments and give you a clear report before you commit.
+            Rentwise sends a trained inspector to assess up to 4 apartments and
+            give you a clear report before you commit.
           </motion.p>
 
           <motion.div
@@ -177,7 +191,8 @@ export default function App() {
             Renting in Lagos is risky.
           </h2>
           <p className="text-lg text-gray-600 text-center max-w-2xl mx-auto mb-12">
-            Too many people pay before they truly know the apartment. Avoid expensive rental mistakes.
+            Too many people pay before they truly know the apartment. Avoid
+            expensive rental mistakes.
           </p>
 
           <motion.div
@@ -207,7 +222,8 @@ export default function App() {
           </motion.div>
 
           <p className="text-center text-lg text-gray-800 font-medium mb-8">
-            Rentwise inspects the property for you <strong>before you pay rent, caution fees, or agent fees.</strong>
+            Rentwise inspects the property for you{" "}
+            <strong>before you pay rent, caution fees, or agent fees.</strong>
           </p>
           <div className="flex justify-center">
             <Button size="lg" variant="outline" asChild>
@@ -226,7 +242,8 @@ export default function App() {
             Know the apartment before you pay.
           </h2>
           <p className="text-lg text-gray-600 text-center max-w-2xl mx-auto mb-12">
-            Rentwise helps you inspect apartments before paying rent, so you can decide with confidence.
+            Rentwise helps you inspect apartments before paying rent, so you can
+            decide with confidence.
           </p>
 
           <motion.div
@@ -237,10 +254,22 @@ export default function App() {
             viewport={{ once: true, amount: 0.12 }}
           >
             {[
-              { title: "Hidden defects checked", desc: "Plumbing, electrical, structure, flood risk." },
-              { title: "Professional report", desc: "Clear findings, photos, and recommendations." },
-              { title: "Faster decisions", desc: "One report for up to 4 apartments." },
-              { title: "Local expertise", desc: "Inspectors who know Lagos properties." },
+              {
+                title: "Hidden defects checked",
+                desc: "Plumbing, electrical, structure, flood risk.",
+              },
+              {
+                title: "Professional report",
+                desc: "Clear findings, photos, and recommendations.",
+              },
+              {
+                title: "Faster decisions",
+                desc: "One report for up to 4 apartments.",
+              },
+              {
+                title: "Local expertise",
+                desc: "Inspectors who know Lagos properties.",
+              },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -248,7 +277,9 @@ export default function App() {
                 className="bg-gray-50 border border-gray-100 rounded-xl p-5 text-center"
               >
                 <CheckCircle2 className="w-8 h-8 text-[var(--rentwise-green)] mx-auto mb-3" />
-                <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
+                <h3 className="font-semibold text-gray-900 mb-1">
+                  {item.title}
+                </h3>
                 <p className="text-sm text-gray-600">{item.desc}</p>
               </motion.div>
             ))}
@@ -271,7 +302,8 @@ export default function App() {
             What we check for you
           </h2>
           <p className="text-gray-600 text-center max-w-xl mx-auto mb-10">
-            Our inspectors assess these areas so you get a clear picture before you commit.
+            Our inspectors assess these areas so you get a clear picture before
+            you commit.
           </p>
 
           <motion.div
@@ -321,10 +353,26 @@ export default function App() {
             viewport={{ once: true, amount: 0.12 }}
           >
             {[
-              { step: 1, title: "Send us the apartment details", body: "Share the address on WhatsApp. We cover Lagos-wide." },
-              { step: 2, title: "We inspect the property", body: "A trained inspector visits and assesses the unit(s)." },
-              { step: 3, title: "We send you a clear report", body: "Photos, findings, risk notes, and recommendations." },
-              { step: 4, title: "You decide with confidence", body: "Pay and move in only if the report works for you." },
+              {
+                step: 1,
+                title: "Send us the apartment details",
+                body: "Share the address on WhatsApp. We cover Lagos-wide.",
+              },
+              {
+                step: 2,
+                title: "We inspect the property",
+                body: "A trained inspector visits and assesses the unit(s).",
+              },
+              {
+                step: 3,
+                title: "We send you a clear report",
+                body: "Photos, findings, risk notes, and recommendations.",
+              },
+              {
+                step: 4,
+                title: "You decide with confidence",
+                body: "Pay and move in only if the report works for you.",
+              },
             ].map(({ step, title, body }) => (
               <motion.div key={step} variants={fadeUp} className="text-center">
                 <div className="w-12 h-12 rounded-full bg-[var(--rentwise-primary)] text-white font-bold text-lg flex items-center justify-center mx-auto mb-4">
@@ -353,7 +401,8 @@ export default function App() {
             See what you get
           </h2>
           <p className="text-gray-600 text-center max-w-xl mx-auto mb-10">
-            Every inspection includes a clear report with photos, defect notes, risk rating, and recommendations.
+            Every inspection includes a clear report with photos, defect notes,
+            risk rating, and recommendations.
           </p>
 
           <InspectionReportPreview />
@@ -385,7 +434,7 @@ export default function App() {
             viewport={{ once: true }}
           >
             {[
-              { location: "Mainland", price: "₦35,000" },
+              { location: "Mainland", price: "₦37,000" },
               { location: "Island", price: "₦45,000" },
             ].map(({ location, price }) => (
               <div
@@ -399,7 +448,11 @@ export default function App() {
                   {price}
                 </p>
                 <ul className="space-y-3 mb-8">
-                  {["Up to 4 apartments", "Detailed report with photos", "Clear recommendations"].map((item, i) => (
+                  {[
+                    "Up to 4 apartments",
+                    "Detailed report with photos",
+                    "Clear recommendations",
+                  ].map((item, i) => (
                     <li key={i} className="flex items-center gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[var(--rentwise-green)] shrink-0" />
                       <span className="text-gray-700">{item}</span>
@@ -474,7 +527,8 @@ export default function App() {
             Why Rentwise
           </h2>
           <p className="text-gray-600 text-center max-w-xl mx-auto mb-10">
-            A trusted inspection service for renters. Not a listing site. Not analytics. Just inspection before you pay.
+            A trusted inspection service for renters. Not a listing site. Not
+            analytics. Just inspection before you pay.
           </p>
 
           <motion.div
@@ -538,7 +592,9 @@ export default function App() {
             alt="Rentwise"
             className="h-14 md:h-16 w-auto object-contain brightness-0 invert opacity-90 mx-auto mb-3"
           />
-          <p className="text-[var(--rentwise-green)] font-medium mb-2">{TAGLINE}</p>
+          <p className="text-[var(--rentwise-green)] font-medium mb-2">
+            {TAGLINE}
+          </p>
           <p className="text-gray-400 text-sm mb-6">
             Apartment inspection service for Lagos renters.
           </p>
@@ -548,7 +604,9 @@ export default function App() {
             </a>
           </Button>
           <div className="border-t border-gray-700 mt-8 pt-8">
-            <p className="text-gray-500 text-sm">© 2026 Rentwise. All rights reserved.</p>
+            <p className="text-gray-500 text-sm">
+              © 2026 Rentwise. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
