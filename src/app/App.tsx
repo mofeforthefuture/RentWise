@@ -23,8 +23,8 @@ import logoColor from "../assets/logo-color.png";
 import heroPhoto from "../assets/e37118e8-e920-41df-9192-d6c3b1da6ad6.JPG";
 
 const TAGLINE = "Inspect before you rent.";
-const WAITLIST_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLScgFDwANDx5Wf0eJqt6SkAETqt3HMTtg2ZK_UaX5wvlqhQwMg/viewform";
+const WHATSAPP_URL =
+  "https://wa.me/2347047006110?text=Hi%20Rentwise%2C%20I%27d%20like%20to%20book%20an%20inspection";
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
   animate: {
@@ -139,8 +139,8 @@ export default function App() {
             transition={{ duration: 0.5, delay: 0.18 }}
           >
             <Button size="lg" variant="outline" asChild>
-              <a href={WAITLIST_URL} target="_blank" rel="noreferrer">
-                Join Waitlist
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+                Chat with Us
               </a>
             </Button>
           </motion.div>
@@ -227,8 +227,8 @@ export default function App() {
           </p>
           <div className="flex justify-center">
             <Button size="lg" variant="outline" asChild>
-              <a href={WAITLIST_URL} target="_blank" rel="noreferrer">
-                Join Waitlist
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+                Chat with Us
               </a>
             </Button>
           </div>
@@ -287,8 +287,8 @@ export default function App() {
 
           <div className="flex justify-center">
             <Button size="lg" variant="outline" asChild>
-              <a href={WAITLIST_URL} target="_blank" rel="noreferrer">
-                Join Waitlist
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+                Chat with Us
               </a>
             </Button>
           </div>
@@ -327,8 +327,8 @@ export default function App() {
 
           <div className="flex justify-center mt-10">
             <Button variant="outline" asChild>
-              <a href={WAITLIST_URL} target="_blank" rel="noreferrer">
-                Join Waitlist
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+                Chat with Us
               </a>
             </Button>
           </div>
@@ -386,8 +386,8 @@ export default function App() {
 
           <div className="flex justify-center">
             <Button size="lg" variant="outline" asChild>
-              <a href={WAITLIST_URL} target="_blank" rel="noreferrer">
-                Join Waitlist
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+                Chat with Us
               </a>
             </Button>
           </div>
@@ -409,8 +409,8 @@ export default function App() {
 
           <div className="flex justify-center mt-10">
             <Button size="lg" variant="outline" asChild>
-              <a href={WAITLIST_URL} target="_blank" rel="noreferrer">
-                Join Waitlist
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+                Chat with Us
               </a>
             </Button>
           </div>
@@ -460,8 +460,8 @@ export default function App() {
                   ))}
                 </ul>
                 <Button size="lg" variant="outline" className="w-full" asChild>
-                  <a href={WAITLIST_URL} target="_blank" rel="noreferrer">
-                    Join Waitlist
+                  <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+                    Chat with Us
                   </a>
                 </Button>
               </div>
@@ -512,8 +512,8 @@ export default function App() {
 
           <div className="flex justify-center mt-10">
             <Button variant="outline" asChild>
-              <a href={WAITLIST_URL} target="_blank" rel="noreferrer">
-                Join Waitlist
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+                Chat with Us
               </a>
             </Button>
           </div>
@@ -572,14 +572,14 @@ export default function App() {
             Let Rentwise inspect it before you pay.
           </p>
           <motion.a
-            href={WAITLIST_URL}
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-white text-[var(--rentwise-primary)] px-8 py-4 rounded-full font-bold shadow-xl text-lg"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
           >
-            Join Waitlist
+            Chat with Us
           </motion.a>
         </div>
       </motion.section>
@@ -599,8 +599,8 @@ export default function App() {
             Apartment inspection service for Lagos renters.
           </p>
           <Button variant="outline" asChild>
-            <a href={WAITLIST_URL} target="_blank" rel="noreferrer">
-              Join Waitlist
+            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+              Chat with Us
             </a>
           </Button>
           <div className="border-t border-gray-700 mt-8 pt-8">
